@@ -1,0 +1,39 @@
+@import "../Misc/variables";
+
+@mixin flexCenter($direction: row, $justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.button {
+  @include flexCenter();
+
+  flex: 1;
+  margin: 10px;
+  border-radius: 30px;
+
+  border: 1px solid $text-color-light;
+  background-color: $primary-light;
+  color: $text-color-light;
+
+  padding: 10px;
+  min-width: 140px;
+
+  &:hover {
+    cursor: pointer;
+    font-weight: 600;
+    background-color: darken($primary-light, 5%);
+  }
+}
+
+.button__theme-Dark {
+  border: 1px solid $text-color-dark;
+  background-color: $primary-dark;
+  color: $text-color-dark;
+
+  &:hover {
+    background-color: darken($primary-dark, 5%);
+  }
+}

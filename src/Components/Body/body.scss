@@ -1,0 +1,27 @@
+@import "../Misc/variables";
+
+@mixin flexCenter($direction: row, $justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.body {
+  @include flexCenter($direction: column, $justify: flex-start);
+
+  width: 100%;
+  height: calc(100vh - 101px);
+  background-color: $secondary-light;
+
+  #{&}__buttons {
+    @include flexCenter($justify: space-between);
+    width: 100%;
+    height: wrap-content;
+    flex-wrap: wrap;
+  }
+}
+
+.body__theme-Dark {
+  background-color: $secondary-dark;
+}

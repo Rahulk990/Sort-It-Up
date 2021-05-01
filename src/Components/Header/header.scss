@@ -1,0 +1,49 @@
+@import "../Misc/variables";
+
+@mixin flexCenter($direction: row, $justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.header {
+  @include flexCenter($justify: space-between);
+
+  height: 60px;
+  width: 100%;
+  background-color: $primary-light;
+
+  #{&}__title {
+    @include flexCenter();
+    margin: 10px;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+
+    p {
+      color: $text-color-light;
+      font-size: 25px;
+      font-weight: 700;
+      margin-left: 10px;
+      padding-bottom: 5px;
+    }
+  }
+
+  #{&}__themeChanger {
+    @include flexCenter();
+    margin: 10px;
+  }
+}
+
+.header__theme-Dark {
+  background-color: $primary-dark;
+
+  .header__title {
+    p {
+      color: $text-color-dark;
+    }
+  }
+}

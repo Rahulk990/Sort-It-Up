@@ -1,0 +1,32 @@
+@import "../Misc/variables";
+
+@mixin flexCenter($direction: row, $justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.footer {
+  @include flexCenter();
+
+  height: 40px;
+  width: 100%;
+  background-color: $secondary-light;
+  border-top: 1px solid $primary-light;
+
+  p {
+    color: $text-color-light;
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
+
+.footer__theme-Dark {
+  background-color: $secondary-dark;
+  border-top: 1px solid $text-color-light;
+
+  p {
+    color: $text-color-dark;
+  }
+}
