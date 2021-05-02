@@ -3,12 +3,31 @@
 @mixin flexCenter($direction: row, $justify: center) {
   display: flex;
   justify-content: $justify;
-  align-items: center;
   flex-direction: $direction;
 }
 
 .sorter {
-  @include flexCenter($direction: column);
-  width: 100%;
+  @include flexCenter();
   flex-grow: 1;
+
+  align-items: flex-end;
+  padding: 10px 0 20px 0;
+  width: 90%;
+
+  #{&}__arrayBars {
+    margin-left: 1px;
+    flex-grow: 1;
+    flex-basis: 10px;
+    background-color: $text-color-light;
+  }
+}
+
+.sorter__theme-Dark {
+  .sorter__arrayBars {
+    background-color: $text-color-dark;
+  }
+}
+
+.barColor {
+  background-color: red;
 }

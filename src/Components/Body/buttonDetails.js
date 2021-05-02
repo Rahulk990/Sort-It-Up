@@ -1,4 +1,8 @@
-
+import bubbleSortAlgorithm from './Algorithms/bubbleSortAlgorithm'
+import selectionSortAlgorithm from './Algorithms/selectionSortAlgorithm'
+import insertionSortAlgorithm from './Algorithms/insertionSortAlgorithm'
+import mergeSortAlgorithm from './Algorithms/mergeSortAlgorithm'
+import quickSortAlgorithm from './Algorithms/quickSortAlgorithm'
 
 const enableAllButtons = () => {
     const allButtons = document.getElementsByClassName('button');
@@ -18,41 +22,42 @@ const disableAllButtons = () => {
 const buttons = [
     {
         name: "Bubble Sort",
-        onClick: () => {
+        onClick: (array) => {
             disableAllButtons();
             document.getElementsByClassName('button')[0].classList.add('button__active');
+            return bubbleSortAlgorithm(array)
         },
     },
     {
         name: "Selection Sort",
-        onClick: () => {
+        onClick: (array) => {
             disableAllButtons();
             document.getElementsByClassName('button')[1].classList.add('button__active');
-
+            return selectionSortAlgorithm(array)
         },
     },
     {
         name: "Insertion Sort",
-        onClick: () => {
+        onClick: (array) => {
             disableAllButtons();
             document.getElementsByClassName('button')[2].classList.add('button__active');
-
+            return insertionSortAlgorithm(array)
         },
     },
     {
         name: "Merge Sort",
-        onClick: () => {
+        onClick: (array) => {
             disableAllButtons();
             document.getElementsByClassName('button')[3].classList.add('button__active');
-
+            return mergeSortAlgorithm(array)
         },
     },
     {
         name: "Quick Sort",
-        onClick: () => {
+        onClick: (array) => {
             disableAllButtons();
             document.getElementsByClassName('button')[4].classList.add('button__active');
-
+            return quickSortAlgorithm(array)
         },
     },
     {
@@ -64,5 +69,4 @@ const buttons = [
     }
 ];
 
-export { enableAllButtons };
 export default buttons;

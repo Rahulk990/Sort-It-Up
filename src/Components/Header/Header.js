@@ -23,7 +23,7 @@ const Header = ({ theme, setTheme }) => {
             </div>
 
             <div className="header__themeChanger" onClick={changeTheme}>
-                MicroService
+                Change
             </div>
 
         </div>
