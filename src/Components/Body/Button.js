@@ -2,11 +2,11 @@ import React from 'react'
 
 import './button.scss'
 
-const Button = ({ name, onClick }) => {
+const Button = ({ name, reset, onClick, theme }) => {
     return (
-        <div className="button" onClick={onClick}>
+        <button className={`button ${reset ? 'button__reset' : ''}`} onClick={onClick}>
             {name}
-        </div>
+        </button >
     )
 }
 

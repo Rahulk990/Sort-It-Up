@@ -10,14 +10,14 @@
 .body {
   @include flexCenter($direction: column, $justify: flex-start);
 
+  flex-grow: 1;
   width: 100%;
-  height: calc(100vh - 101px);
   background-color: $secondary-light;
 
   #{&}__buttons {
     @include flexCenter($justify: space-between);
     width: 100%;
-    height: wrap-content;
+    min-height: fit-content;
     flex-wrap: wrap;
   }
 }

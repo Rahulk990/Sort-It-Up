@@ -10,7 +10,7 @@
 .header {
   @include flexCenter($justify: space-between);
 
-  height: 60px;
+  min-height: 60px;
   width: 100%;
   background-color: $primary-light;
 

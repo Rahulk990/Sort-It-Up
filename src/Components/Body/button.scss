@@ -26,6 +26,21 @@
     font-weight: 600;
     background-color: darken($primary-light, 5%);
   }
+
+  &:disabled {
+    cursor: default;
+    font-weight: 400;
+    background-color: lighten($primary-light, 10%);
+    border: 1px solid darken($primary-light, 10%);
+    color: darken($primary-light, 10%);
+  }
+
+  &.button__active {
+    border: 1px solid green;
+    color: green;
+    font-weight: 600;
+    background-color: darken($primary-light, 5%);
+  }
 }
 
 .button__theme-Dark {
@@ -36,4 +51,23 @@
   &:hover {
     background-color: darken($primary-dark, 5%);
   }
+
+  &:disabled {
+    background-color: lighten($primary-dark, 10%);
+    border: 1px solid darken($primary-dark, 10%);
+    color: darken($primary-dark, 10%);
+  }
+
+  &.button__active {
+    border: 1px solid green;
+    color: green;
+    font-weight: 600;
+    background-color: darken($primary-dark, 5%);
+  }
+}
+
+.button__reset {
+  border: 1px solid red;
+  color: red;
+  font-weight: 600;
 }

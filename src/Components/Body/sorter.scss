@@ -1,14 +1,14 @@
 @import "../Misc/variables";
 
 @mixin flexCenter($direction: row, $justify: center) {
-    display: flex;
-    justify-content: $justify;
-    align-items: center;
-    flex-direction: $direction;
-  }
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
 
 .sorter {
-    @include flexCenter($direction: column);
-    width: 100%;
-    flex: 1;
+  @include flexCenter($direction: column);
+  width: 100%;
+  flex-grow: 1;
 }

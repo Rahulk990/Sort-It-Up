@@ -6,9 +6,7 @@ const Sorter = () => {
     return (
         <div className="sorter">
 
-            <div className="sorter__main">
-
-            </div>
+            
 
         </div>
     )

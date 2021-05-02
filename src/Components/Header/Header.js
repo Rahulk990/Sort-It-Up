@@ -12,18 +12,8 @@ const Header = ({ theme, setTheme }) => {
         }
     }
 
-    useEffect(() => {
-
-        if (theme === "light") {
-            document.getElementsByClassName("header")[0].classList.remove("header__theme-Dark");
-        } else {
-            document.getElementsByClassName("header")[0].classList.add("header__theme-Dark");
-        }
-
-    }, [theme])
-
     return (
-        <div className="header">
+        <div className={`header ${(theme === 'dark') ? 'header__theme-Dark' : ''}`}>
 
             <div className="header__title">
 

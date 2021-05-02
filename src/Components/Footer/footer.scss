@@ -10,7 +10,7 @@
 .footer {
   @include flexCenter();
 
-  height: 40px;
+  min-height: 40px;
   width: 100%;
   background-color: $secondary-light;
   border-top: 1px solid $primary-light;
