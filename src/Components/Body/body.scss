@@ -13,6 +13,7 @@
   flex-grow: 1;
   width: 100%;
   background-color: $secondary-light;
+  transition: 0.5s;
 
   #{&}__buttons {
     @include flexCenter($justify: space-between);

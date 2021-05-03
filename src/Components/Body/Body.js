@@ -43,7 +43,6 @@ const Body = ({ theme }) => {
         setTimeouts([]);
     }
 
-
     return (
         <div className={`body ${(theme === 'dark') ? 'body__theme-Dark' : ''}`}>
 

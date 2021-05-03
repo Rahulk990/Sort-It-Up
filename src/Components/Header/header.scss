@@ -13,6 +13,7 @@
   min-height: 60px;
   width: 100%;
   background-color: $primary-light;
+  transition: 0.5s;
 
   #{&}__title {
     @include flexCenter();
@@ -35,6 +36,37 @@
   #{&}__themeChanger {
     @include flexCenter();
     margin: 10px;
+
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+
+    border-radius: 160px;
+    background-color: darken($primary-light, 10%);
+    transition: 0.5s;
+    box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.1),
+      inset 0 2px 6px rgba(0, 0, 0, 0.1), inset 0 -3px 3px rgba(0, 0, 0, 0.01);
+
+    .header__themeChanger__indicator {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(
+        to bottom,
+        lighten($primary-light, 5%),
+        darken($primary-light, 15%)
+      );
+
+      border-radius: 50%;
+      transform: scale(0.8);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1),
+        inset 0 3px 3px rgba(255, 255, 255, 0.8),
+        inset 0 -3px 3px rgba(255, 255, 255, 0.8);
+      transition: 0.5s;
+    }
   }
 }
 
@@ -44,6 +76,25 @@
   .header__title {
     p {
       color: $text-color-dark;
+    }
+  }
+
+  .header__themeChanger {
+    background-color: darken($primary-dark, 10%);
+    box-shadow: inset 0 6px 20px rgba(0, 0, 0, 0.1),
+      inset 0 6px 6px rgba(0, 0, 0, 0.1), inset 0 -3px 3px rgba(0, 0, 0, 0.1);
+
+    .header__themeChanger__indicator {
+      left: 0;
+      background: linear-gradient(
+        to bottom,
+        lighten($primary-dark, 5%),
+        darken($primary-dark, 15%)
+      );
+
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5),
+        inset 0 3px 3px rgba(255, 255, 255, 0.2),
+        inset 0 -3px 3px rgba(255, 255, 255, 0.2);
     }
   }
 }

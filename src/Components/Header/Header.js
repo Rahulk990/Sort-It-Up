@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { resetColors } from '../Body/buttonDetails';
 
 import './header.scss'
 
@@ -10,6 +11,7 @@ const Header = ({ theme, setTheme }) => {
         } else {
             setTheme("light");
         }
+        resetColors();
     }
 
     return (
@@ -23,7 +25,7 @@ const Header = ({ theme, setTheme }) => {
             </div>
 
             <div className="header__themeChanger" onClick={changeTheme}>
-                Change
+                <i className="header__themeChanger__indicator"></i>
             </div>
 
         </div>

@@ -17,6 +17,7 @@
   border: 1px solid $text-color-light;
   background-color: $primary-light;
   color: $text-color-light;
+  transition: 0.5s;
 
   padding: 10px;
   min-width: 140px;
@@ -25,6 +26,7 @@
     cursor: pointer;
     font-weight: 600;
     background-color: darken($primary-light, 5%);
+    transition: 0s;
   }
 
   &:disabled {

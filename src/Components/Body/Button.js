@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import './button.scss'
 
 const Button = ({ name, reset, onClick, array, resetter, theme, setTimeouts, clearAllTimeouts }) => {
 
+    const primaryColor = useRef("#24292E");
     const processAlgorithm = (animations) => {
         const allTimeouts = []
-
-        let primaryColor = "green"
         let secondaryColor = "red"
         let animationSpeed = 10000 / (animations.length + 1);
 
@@ -23,14 +22,9 @@ const Button = ({ name, reset, onClick, array, resetter, theme, setTimeouts, cle
                 const barOneStyle = arrayBars[barOneIdx].style;
                 const barTwoStyle = arrayBars[barTwoIdx].style;
 
-                if (theme === "light") {
-                    primaryColor = "#24292E";
-                } else {
-                    primaryColor = "#CDD9E5";
-                }
-
-                const color = (cnt % 2 === 1) ? secondaryColor : primaryColor;
+                const colorId = (cnt % 2 === 1) ? 1 : 0;
                 allTimeouts.push(setTimeout(() => {
+                    const color = (colorId) ? secondaryColor : primaryColor.current;
                     barOneStyle.backgroundColor = color;
                     barTwoStyle.backgroundColor = color;
                 }, i * animationSpeed))
@@ -47,6 +41,14 @@ const Button = ({ name, reset, onClick, array, resetter, theme, setTimeouts, cle
 
         return allTimeouts;
     }
+
+    useEffect(() => {
+        if (theme === "light") {
+            primaryColor.current = "#24292E";
+        } else {
+            primaryColor.current = "#CDD9E5";
+        }
+    }, [theme])
 
     const clickButton = () => {
         if (reset) {

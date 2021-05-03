@@ -19,6 +19,13 @@ const disableAllButtons = () => {
     }
 }
 
+const resetColors = () => {
+    const arrayBars = document.getElementsByClassName("sorter__arrayBars");
+    for (let i = 0; i < arrayBars.length; i++) {
+        arrayBars[i].style.removeProperty('background-color');
+    }
+}
+
 const buttons = [
     {
         name: "Bubble Sort",
@@ -64,9 +71,11 @@ const buttons = [
         name: "Reset",
         onClick: () => {
             enableAllButtons();
+            resetColors();
         },
         reset: true
     }
 ];
 
+export { resetColors };
 export default buttons;
