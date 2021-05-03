@@ -1,8 +1,8 @@
 # Sorting_Algorithms_Visualizer
-A website that helps in visualizing the sorting algorithms as they sort an random array of intergers. Check [Wiki Page](https://en.wikipedia.org/wiki/Sorting_algorithm) for more information about each algorithm.
-Support this project by leaving a :star:
+A website that helps in visualizing the sorting algorithms as they sort an random array of intergers. The Website is currently hosted [here](https://sort-it-up.netlify.app/). Support this project by leaving a :star:
 
 ## _Algorithms Used (Currently)_
+Check [Wiki Page](https://en.wikipedia.org/wiki/Sorting_algorithm) for more information about each algorithm.
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
@@ -16,19 +16,16 @@ Support this project by leaving a :star:
 
 ## _Website Preview_
 
-<img src="/images/light.jpg" height="500"/>   <img src="/images/dark.jpg" height="500"/>
+<img src="/images/light.jpg" height="400"/>  
+<br />
+<img src="/images/dark.jpg" height="400"/>
 
-## _Using the Code_
+## _Contribution_
 Feel free to open an issue if you encounter any problem
 - Clone the Repository
 - Install the Requirements: ``` npm install ```
 - Run Development Server: ``` npm run dev ```
-- Visit the localhost and use
-
-## _Contribution_
 - Implement new Algorithms or Ideas
-- Implement Pause/Play Feature
-- Report Bugs and give feedback
 
 ---
 > ## F.A.Q
