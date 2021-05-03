@@ -1,5 +1,5 @@
 # Sort-It-Up
-Sort It Up is a website that helps in visualizing the sorting algorithms as they sort an random array of intergers. The Website is currently hosted [here](https://sort-it-up.netlify.app/). Support this project by leaving a :star:
+Sort It Up is a website that helps in visualizing the sorting algorithms as they sort a random array of integers. The Website is currently hosted [here](https://sort-it-up.netlify.app/). Support this project by leaving a :star:
 
 ## _Algorithms Used (Currently)_
 Check [Wiki Page](https://en.wikipedia.org/wiki/Sorting_algorithm) for more information about each algorithm.
